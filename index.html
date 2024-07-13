@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz Game</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: blue;
+            font-size: 36px;
+            margin: 20px 0;
+        }
+        .quiz-container {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin: 15px 0;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        .buttons {
+            margin: 10px 0;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buttons button.yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons button.no {
+            background-color: #f44336;
+            color: white;
+        }
+        .buttons button:hover {
+            background-color: #333;
+        }
+        .result {
+            display: none;
+        }
+        .result p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .result button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #2196F3;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .result button:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Quiz Game</h1>
+    <div class="quiz-container" id="quiz-container">
+        <div class="question" id="question-container">
+            <p id="question">Placeholder question?</p>
+        </div>
+        <div class="buttons">
+            <button class="yes" onclick="answer('네')">네</button>
+            <button class="no" onclick="answer('아니요')">아니요</button>
+        </div>
+    </div>
+    <div class="result" id="result">
+        <p id="result-text"></p>
+        <button onclick="restart()">Restart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
